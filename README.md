@@ -19,9 +19,6 @@ Enter the amount to withdraw: 452
 Enter the amount to withdraw: 5.6
 ```
 
-
-hallotim
-
 Wie Sie sehen, kann der Geldautomat nur mit ganzen Zahlen operieren und stürzt ab, wenn etwas anderes eingegeben wird. Es gibt verschiedene Verbesserungen, die wir in den nächsten Wochen am Geldautomat vornehmen wollen. Heute wollen wir die `ATM`-Klasse erstmal so verändern, dass sie überprüft, ob der Benutzer genug Geld zur Verfügung hat, und eine passende Fehlermeldung ausgibt, wenn das nicht der Fall ist. Der Kontostand sollte sich dann auch im Laufe einer Sitzung verändern, also mitgespeichert werden, wie viel die Benutzerin noch übrig hat. Wir gehen hier der Einfachheit halber davon aus, dass der Geldautomat immer genügend Bargeld zur Verfügung hat, und schreiben den initialen Kontostand "hart" in den Code.
 
 
