@@ -3,6 +3,7 @@ package b;
 import java.io.*;
 
 public class ATM {
+	int kontostand = 400;
 	
 	/**
 	 * Main command loop of the ATM
@@ -13,10 +14,15 @@ public class ATM {
 	 */
 	public void run() {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		//einlesen vom eingegebenen betrag
+
 		while(true) {
 			try {
+				//versuch das im try komplett auszuführen und wenn es probleme gibt mach catch
 				System.out.print("Enter the amount to withdraw: ");
+				//eingabe zu einem int parsen
 				int amount = Integer.parseInt(br.readLine());
+				//Funktionsaufruf mit dem eingegeben betrag (amount)
 				cashout(amount);
 			} catch (Exception e) {
 				break;
@@ -25,7 +31,12 @@ public class ATM {
 	}
 	
 	public void cashout(int amount) {
-		
+		if (amount <= kontostand){
+			kontostand = kontostand - amount ;
+			System.out.println("Ok, here is your money, enjoy!");
+		} else {
+			System.out.println("Sorry, not enough money in the bank.");
+		}
 	};
 	
 	/**
